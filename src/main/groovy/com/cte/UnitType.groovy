@@ -1,0 +1,5 @@
+package com.cte
+
+enum UnitType {
+  UNIDADES,KILOGRAMOS,KILOMETROS,METROS,LITROS,HORAS
+}

@@ -1,0 +1,5 @@
+package com.cte
+
+enum LeadType {
+  USER,CLIENTE,PROVEEDOR,CLIENTE_PROVEEDOR,EMPLEADO
+}

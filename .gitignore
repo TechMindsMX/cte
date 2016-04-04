@@ -14,3 +14,5 @@ gradlew.bat
 grails-app/assets/javascripts/third-party/node_modules/
 grails-app/assets/javascripts/third-party/
 node_modules/
+logs/
+logs

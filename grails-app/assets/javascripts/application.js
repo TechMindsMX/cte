@@ -1,20 +1,23 @@
-// This is a manifest file that'll be compiled into application.js.
-//
-// Any JavaScript file within this directory can be referenced here using a relative path.
-//
-// You're free to add application-wide JavaScript to this file, but it's generally better
-// to create separate JavaScript files as needed.
-//
-//= require jquery-2.1.3.js
-//= require_tree .
-//= require_self
+//= require third-party/jquery/dist/jquery.js
+//= require third-party/bootstrap/dist/js/bootstrap.js
+//= require third-party/slimScroll/jquery.slimscroll.js
+//= require third-party/hisrc/hisrc.js
+//= require third-party/modulus-uno-theme/js/flex.js
+//= require third-party/holderjs/holder.min.js
+//= require home/home_controller.js
 
-if (typeof jQuery !== 'undefined') {
-    (function($) {
-        $('#spinner').ajaxStart(function() {
-            $(this).fadeIn();
-        }).ajaxStop(function() {
-            $(this).fadeOut();
-        });
-    })(jQuery);
-}
+var App = (function(){
+
+  var start = function(){
+    HomeController.start();
+  };
+
+  return{
+    start:start
+  };
+
+}());
+
+jQuery(function($){
+  App.start();
+});

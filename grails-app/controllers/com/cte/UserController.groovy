@@ -59,23 +59,27 @@ class UserController {
     def profile = command.getProfile()
     def telephone = command.getTelephone()
     if(telephone)profile.addToTelephones(telephone)
-      user.profile = profile
-      def userRole = Role.findWhere(authority: 'ROLE_INTEGRADO')
-      if(params.legal){
-        userRole = Role.findWhere(authority: 'ROLE_LEGAL_REPRESENTATIVE')
-        companyService.addingLegalRepresentativeToCompany(company, user)
-      }
+
+    user.profile = profile
+    def userRole = Role.findWhere(authority: 'ROLE_INTEGRADO')
+    
+    if(params.legal){
+      userRole = Role.findWhere(authority: 'ROLE_LEGAL_REPRESENTATIVE')
+      companyService.addingLegalRepresentativeToCompany(company, user)
+    }
     if (params.authorize)
       userRole = Role.get(params.roleId)
-      userService.save(user, userRole)
-      if (params.authorize)
-        companyService.addingActorToCompany(company, user)
 
-        flash.message = g.message(code: 'login.create')
-        if(params.legal || params.authorize) {
-          render view:"show", model:[user:user,company:session.company]
-          return
-        }
+    println userRole  
+    userService.save(user, userRole)
+    if (params.authorize)
+      companyService.addingActorToCompany(company, user)
+
+    flash.message = g.message(code: 'login.create')
+    if(params.legal || params.authorize) {
+      render view:"show", model:[user:user,company:session.company]
+      return
+    }
     render view:"detail", model:[user:user,company:session.company]
   }
 

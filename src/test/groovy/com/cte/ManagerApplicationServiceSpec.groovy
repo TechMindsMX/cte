@@ -12,11 +12,9 @@ import grails.test.mixin.Mock
 class ManagerApplicationServiceSpec extends Specification {
 
   def restService = Mock(RestService)
-  def modulusUnoService = Mock(ModulusUnoService)
 
   def setup() {
     service.restService = restService
-    service.modulusUnoService = modulusUnoService
   }
 
   void "Accepting a company to integrate"() {

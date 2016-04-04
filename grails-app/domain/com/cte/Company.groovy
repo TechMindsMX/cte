@@ -7,7 +7,7 @@ class Company {
   String webSite
   Integer employeeNumbers
   BigDecimal grossAnnualBilling
-  CompanyStatus status = CompanyStatus.ACCEPTED
+  CompanyStatus status = CompanyStatus.CREATED
   String uuid = UUID.randomUUID().toString().replace('-','')[0..15]
   Integer numberOfAuthorizations = 1
   CompanyTaxRegime taxRegime = CompanyTaxRegime.MORAL

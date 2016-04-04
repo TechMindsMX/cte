@@ -6,9 +6,17 @@
         <g:if env="development"><asset:stylesheet src="errors.css"/></g:if>
     </head>
     <body>
-        <ul class="errors">
-            <li>Error: Page Not Found (404)</li>
-            <li>Path: ${request.forwardURI}</li>
-        </ul>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12" align="center" >
+            <img src="http://www.modulusuno.com.s3.amazonaws.com/logo_modulusuno.png" width="30%" align="center">
+            <h1> Modulus UNO </h1>
+            <br />
+            <g:link controller="dashboard" class="btn btn-default btn-lg">
+              Regresar a la Pagina principal
+            </g:link>
+          </div>
+        </div>
+      </div>
     </body>
 </html>

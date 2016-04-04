@@ -31,21 +31,4 @@ class EmailSenderServiceSpec extends Specification {
     1 * restService.sendCommand(_ as NameCommand, 'clientProvider')
   }
 
-  void "should send sale order to authorize"(){
-    given:"A approver"
-      String email = 'user@email.com'
-      def approver = Mock(User)
-      def profile = Mock(Profile)
-      approver.profile >> profile
-      profile.email >> email
-    and:"A company"
-      def company = new Company(rfc:'ROS861224NHA', bussinessName:'businessName', employeeNumbers:10, grossAnnualBilling:100000).save()
-    and:"A sale order"
-      def saleOrder = new SaleOrder(rfc:'rfc', clientName:'clientName', status:SaleOrderStatus.POR_AUTORIZAR, company:company)
-    when:"We send notification"
-      service.sendSaleOrderToAuthorize(saleOrder, [approver])
-    then:"We expect notification sent"
-    1 * restService.sendCommand(_ as SaleOrderCommand, 'authorizeSaleOrder')
-
-  }
 }

@@ -1,4 +1,4 @@
-<%! import com.modulus.uno.CompanyTaxRegime %>
+<%! import com.cte.CompanyTaxRegime %>
 <f:field property="taxRegime" label="${message(code:"company.taxRegime")}*" wrapper="edit">
 <g:select name="taxRegime" from="${CompanyTaxRegime.values()}" class="form-control" value="${company.taxRegime}" valueMessagePrefix="CompanyTaxRegime"/>
 </f:field>

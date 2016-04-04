@@ -1,6 +1,6 @@
-<%! import com.modulus.uno.BusinessEntityType %>
-<%! import com.modulus.uno.NameType %>
-<%! import com.modulus.uno.LeadType %>
+<%! import com.cte.BusinessEntityType %>
+<%! import com.cte.NameType %>
+<%! import com.cte.LeadType %>
 <f:with bean="businessEntity">
  <input type="hidden" name="clientProviderType" value="${clientProviderType}" />
 

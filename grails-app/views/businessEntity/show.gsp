@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<%! import com.modulus.uno.BusinessEntityType %>
-<%! import com.modulus.uno.NameType %>
+<%! import com.cte.BusinessEntityType %>
+<%! import com.cte.NameType %>
 <html>
   <head>
     <meta name="layout" content="main" />

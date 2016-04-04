@@ -1,4 +1,4 @@
-<%! import com.modulus.uno.CompanyStatus %>
+<%! import com.cte.CompanyStatus %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -53,14 +53,7 @@
                 </div>
               </div>
               </g:if>
-              <g:if test="${company.accounts}">
-              <div class="form-group">
-                <label id="grossAnnualBilling-label" class="col-sm-5 control-label">Cuenta STP</label>
-                <div class="col-sm-4">
-                  ${company.accounts.first().stpClabe}
-                </div>
-              </div>
-              </g:if>
+
               <f:display bean="company" property="rfc" wrapper="describe" />
               </form>
               <div class="property-value">

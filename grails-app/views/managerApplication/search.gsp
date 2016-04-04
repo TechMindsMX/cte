@@ -1,4 +1,4 @@
-<%! import com.modulus.uno.CompanyStatus %>
+<%! import com.cte.CompanyStatus %>
 <!DOCTYPE html>
 <html>
     <head>

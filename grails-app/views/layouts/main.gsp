@@ -1,5 +1,5 @@
-<%! import com.modulus.uno.CompanyStatus %>
-<%! import com.modulus.uno.CompanyTaxRegime %>
+<%! import com.cte.CompanyStatus %>
+<%! import com.cte.CompanyTaxRegime %>
 <!doctype html>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
@@ -115,13 +115,13 @@
               </a>
               <ul class="collapse nav" id="registros">
                 <li>
-                  <g:link action="create" controller="businessEntity" params='[type:"${com.modulus.uno.LeadType.CLIENTE}"]' ><i class="fa fa-angle-double-right"> </i>Alta Cliente</g:link>
+                  <g:link action="create" controller="businessEntity" params='[type:"${com.cte.LeadType.CLIENTE}"]' ><i class="fa fa-angle-double-right"> </i>Alta Cliente</g:link>
                 </li>
                 <li>
-                  <g:link action="create" controller="businessEntity"  params='[type:"${com.modulus.uno.LeadType.PROVEEDOR}"]'><i class="fa fa-angle-double-right"> </i>Alta Proveedor</g:link>
+                  <g:link action="create" controller="businessEntity"  params='[type:"${com.cte.LeadType.PROVEEDOR}"]'><i class="fa fa-angle-double-right"> </i>Alta Proveedor</g:link>
                 </li>
                 <li>
-                  <g:link action="create" controller="businessEntity"  params='[type:"${com.modulus.uno.LeadType.EMPLEADO}"]'><i class="fa fa-angle-double-right"> </i>Alta Empleado</g:link>
+                  <g:link action="create" controller="businessEntity"  params='[type:"${com.cte.LeadType.EMPLEADO}"]'><i class="fa fa-angle-double-right"> </i>Alta Empleado</g:link>
                 </li>
                 <li>
                   <g:link action="createMultiEmployees" controller="businessEntity" ><i class="fa fa-angle-double-right"> </i>Alta Multiples Empleados</g:link>

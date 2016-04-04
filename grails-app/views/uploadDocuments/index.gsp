@@ -1,4 +1,4 @@
-<%! import com.modulus.uno.CompanyTaxRegime %>
+<%! import com.cte.CompanyTaxRegime %>
 <!DOCTYPE html>
 <html>
     <head>

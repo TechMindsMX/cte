@@ -9,7 +9,7 @@
   </div>
   <div class="form-group">
     <label for="">${message(code:"commission.type.label")}</label>
-    <g:select name="type" from="${com.modulus.uno.CommissionType.values()}" class="form-control" />
+    <g:select name="type" from="${com.cte.CommissionType.values()}" class="form-control" />
   </div>
 </f:with>
 <input type="hidden" id="company" name="company" value="${company.id}" />

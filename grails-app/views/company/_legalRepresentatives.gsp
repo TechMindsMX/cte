@@ -1,4 +1,4 @@
-<%! import com.modulus.uno.CompanyTaxRegime %>
+<%! import com.cte.CompanyTaxRegime %>
 
 <g:if test="${company.taxRegime == CompanyTaxRegime.MORAL}">
   <g:set var="labelNoExist" value="Debe agregar al menos un representante legal"/>

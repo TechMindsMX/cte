@@ -18,7 +18,7 @@
       <td><integradora:formatPrice number="${loanOrder.amount}"/></td>
       <td>
         <g:set var="type" value="danger"/>
-        <g:if test="${loanOrder.type == com.modulus.uno.LoanOrderType.CREDITOR}">
+        <g:if test="${loanOrder.type == com.cte.LoanOrderType.CREDITOR}">
         <g:set var="type" value="warning"/>
         </g:if>
         <span class="label label-${type}">
@@ -29,7 +29,7 @@
       <td><g:message code="${loanOrder.status.code}"/></td>
       <td>
         <sec:ifAnyGranted roles="ROLE_INTEGRADO_AUTORIZADOR">
-        <g:if test="${loanOrder.status == com.modulus.uno.LoanOrderStatus.VALIDATE}">
+        <g:if test="${loanOrder.status == com.cte.LoanOrderStatus.VALIDATE}">
         <g:link controller="loanOrder" action="authorize" id="${loanOrder.id}" class="btn btn-default btn-xs">
           Autorizar el prestamo
         </g:link>

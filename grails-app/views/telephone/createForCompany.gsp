@@ -1,4 +1,4 @@
-<%@ page import="com.modulus.uno.TelephoneType" %>
+<%@ page import="com.cte.TelephoneType" %>
 <!DOCTYPE html>
 <html>
     <head>

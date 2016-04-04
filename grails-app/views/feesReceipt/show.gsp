@@ -1,5 +1,5 @@
-<%! import com.modulus.uno.FeesReceiptStatus %>
-<%! import com.modulus.uno.RejectReason %>
+<%! import com.cte.FeesReceiptStatus %>
+<%! import com.cte.RejectReason %>
 <!DOCTYPE html>
 <html>
   <head>

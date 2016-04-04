@@ -52,11 +52,11 @@
                     <f:field property="profile.birthDate" label="${message(code:'user.birthdate')}" value="${new Date()}"/>
                     <div class="form-group">
                       <label class="control-label"><g:message code="user.gender" /><span class="required-indicator">*</span></label>           
-                      <g:select name="banco" from="${com.modulus.uno.Gender.values()}" class="form-control" aria-controls="example-table"/>
+                      <g:select name="banco" from="${com.cte.Gender.values()}" class="form-control" aria-controls="example-table"/>
                     </div>
                     <div class="form-group">
                       <label class="control-label"><g:message code="user.nationality" /><span class="required-indicator">*</span></label>           
-                      <g:select name="banco" from="${com.modulus.uno.Nationality.values()}" class="form-control" aria-controls="example-table"/>
+                      <g:select name="banco" from="${com.cte.Nationality.values()}" class="form-control" aria-controls="example-table"/>
                     </div>
 
                       <div class="form-group">
@@ -69,7 +69,7 @@
                       </div>
                        <div class="form-group">
                         <label>${message(code:'user.telephoneType')}</label>
-                        <g:select name="type" class="form-control" from="${com.modulus.uno.TelephoneType.values()}" />
+                        <g:select name="type" class="form-control" from="${com.cte.TelephoneType.values()}" />
                       </div>
                       
                   </f:with>

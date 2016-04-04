@@ -21,10 +21,10 @@
   </div>
 	<div class="form-group">
 	  <label for="">${message(code:"product.currencyType.label")}</label>
-	  <g:select name="currencyType" from="${com.modulus.uno.CurrencyType.values()}" class="form-control"  />
+	  <g:select name="currencyType" from="${com.cte.CurrencyType.values()}" class="form-control"  />
   </div>
   <div class="form-group">
     <label for="">${message(code:"product.unitType.label")}</label>
-    <g:select name="unitType" from="${com.modulus.uno.UnitType.values()}" class="form-control"  />
+    <g:select name="unitType" from="${com.cte.UnitType.values()}" class="form-control"  />
   </div>
 </f:with>

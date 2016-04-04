@@ -23,17 +23,17 @@
 <f:field property="birthDate" label="${message(code:'user.birthdate')}" value="${new Date()}"/>
 <div class="form-group">
   <label class="control-label"><g:message code="user.gender" /><span class="required-indicator">*</span></label>
-  <g:select name="gender" from="${com.modulus.uno.Gender.values()}" class="form-control" aria-controls="example-table"/>
+  <g:select name="gender" from="${com.cte.Gender.values()}" class="form-control" aria-controls="example-table"/>
 </div>
 <div class="form-group">
   <label class="control-label"><g:message code="user.nationality" /><span class="required-indicator">*</span></label>
-  <g:select name="nationality" from="${com.modulus.uno.Nationality.values()}" class="form-control" aria-controls="example-table"/>
+  <g:select name="nationality" from="${com.cte.Nationality.values()}" class="form-control" aria-controls="example-table"/>
 </div>
 <f:field property="number" label="${message(code:'user.number')}" required="true" wrapper="home"/>
 <f:field property="extension" label="${message(code:'user.extension')}"  wrapper="home"/>
 <div class="form-group">
   <label class="control-label"><g:message code="user.telephoneType" /><span class="required-indicator">*</span></label>
-  <g:select name="telephoneType" from="${com.modulus.uno.TelephoneType.values().findAll{ !it.value.contains('Trabajo')} }" class="form-control" aria-controls="example-table"/>
+  <g:select name="telephoneType" from="${com.cte.TelephoneType.values().findAll{ !it.value.contains('Trabajo')} }" class="form-control" aria-controls="example-table"/>
 </div>
 </g:if>
 

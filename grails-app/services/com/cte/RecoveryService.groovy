@@ -24,7 +24,7 @@ class RecoveryService {
 
     String name = "${user.profile.name} ${user.profile.lastName} ${user.profile.motherLastName}"
     def message = new NameCommand(name:name, type:EmailerMessageType.NEW_USER_MODULUS)
-    //restService.sendCommand(message, grailsApplication.config.emailer.newUser)
+//    restService.sendCommand(message, grailsApplication.config.emailer.newUser)
     user
   }
 

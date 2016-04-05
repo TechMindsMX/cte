@@ -35,11 +35,6 @@ class CompanyController {
     def usd
     if (company.status != CompanyStatus.VALIDATE) {
       params.sepomexUrl = grails.util.Holders.grailsApplication.config.sepomex.url
-      if (company.status == CompanyStatus.ACCEPTED) {
-        if (company.accounts){
-          (balance, usd) = modulusUnoService.consultBalanceOfAccount(company?.accounts?.first()?.timoneUuid)
-        }
-      }
       def isAvailable = companyService.isEnableToSendNotificationIntegrated(company)
         def legalRepresentativesWithDocuments = true
         if (company.taxRegime == CompanyTaxRegime.MORAL)
@@ -128,11 +123,7 @@ class CompanyController {
     def company = params.company
     session['company'] = company
     def companyInfo = Company.findById(company.toLong())
-    if (companyInfo.status != CompanyStatus.ACCEPTED) {
-      redirect(action:"show",id:"${company}")
-      return
-    }
-    redirect(action:"accountstatement")
+    redirect(action:"show",id:"${company}")
   }
 
   def rejected(Company company) {

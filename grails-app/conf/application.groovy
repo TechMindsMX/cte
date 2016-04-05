@@ -10,6 +10,7 @@ grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.cte.UserRo
 grails.plugin.springsecurity.authority.className = 'com.cte.Role'
 grails.plugin.springsecurity.securityConfigType = "InterceptUrlMap"
 grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/dashboard'
+grails.plugin.springsecurity.logout.postOnly = false
 grails.plugin.springsecurity.interceptUrlMap = [
 '/':                        ['permitAll'],
 '/error':                   ['permitAll'],

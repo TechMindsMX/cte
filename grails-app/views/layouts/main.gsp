@@ -264,8 +264,8 @@
 
           <sec:ifAnyGranted roles="ROLE_ADMIN, ROLE_ADMIN_IECCE">
           <li>
-            <a class="" href="${createLink(controller:'dashboard', action:'iecce')}">
-              <i class="fa fa-book"></i> Consultas IECCE
+            <a class="" href="${createLink(controller:'dashboard')}">
+              <i class="fa fa-book"></i> Consultas CTE
             </a>
           </li>
           </sec:ifAnyGranted>

@@ -1,4 +1,5 @@
 <%! import com.cte.CompanyStatus %>
+<%! import com.cte.CompanyTaxRegime %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -81,20 +82,73 @@
           </div>
         </div>
       </div>
+<div class="row">
+      <div class="col-lg-6">
+        <div class="portlet portlet-blue">
+          <div class="portlet-heading">
+            <div class="portlet-title">
+              <h4>Cuentas Bancarias</h4>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div id="defaultPortlet" class="panel-collapse collapse in">
+            <div class="portlet-body">
+              <g:if test="${!company.banksAccounts}">
+                <h4><span class="label label-warning">Debe agregar al menos una cuenta</span></h4>
+              </g:if>
+              <g:render template="bankAccounts" />
+            </div>
+          </div>
+          <div class="portlet-footer">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="portlet portlet-blue">
+          <div class="portlet-heading">
+            <div class="portlet-title">
+              <h4>
+              <g:if test="${company.taxRegime == CompanyTaxRegime.MORAL}">
+                Representantes Legales
+              </g:if><g:else>
+                Persona Física
+              </g:else>
+              </h4>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div id="defaultPortlet" class="panel-collapse collapse in">
+           <div class="portlet-body">
+             <form class="form-horizontal" role="form">
+              <g:render template="legalRepresentatives" />
+             </form>
+            </div>
+          </div>
+          <div class="portlet-footer">
+          </div>
+        </div>
+      </div>
+    </div>
       <div class="row">
         <div class="col-lg-6">
           <div class="portlet portlet-blue">
             <div class="portlet-heading">
               <div class="portlet-title">
-                <h4>Representantes Legales</h4>
+                <h4>Documentos</h4>
               </div>
               <div class="clearfix"></div>
             </div>
             <div id="defaultPortlet" class="panel-collapse collapse in">
               <div class="portlet-body">
-                <form class="form-horizontal" role="form">
-                  <g:render template="legalRepresentatives" />
-                </form>
+                <g:if test="${company.taxRegime == CompanyTaxRegime.MORAL}">
+                  <g:set var="requiredDocs" value="4"/>
+                </g:if><g:else>
+                  <g:set var="requiredDocs" value="5"/>
+                </g:else>
+                <g:if test="${!company.documents || company.documents.size()<requiredDocs.toInteger()}">
+                  <h4><span class="label label-warning">Debe agregar todos los documentos requeridos de la Compañía</span></h4>
+                </g:if>
+                <g:render template="documents" />
               </div>
             </div>
             <div class="portlet-footer">
@@ -122,7 +176,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+     <div class="row">
         <div class="col-lg-6">
           <div class="portlet portlet-blue">
             <div class="portlet-heading">
@@ -134,23 +188,6 @@
             <div id="defaultPortlet" class="panel-collapse collapse in">
               <div class="portlet-body">
                 <g:render template="telephones" />
-              </div>
-            </div>
-            <div class="portlet-footer">
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="portlet portlet-blue">
-            <div class="portlet-heading">
-              <div class="portlet-title">
-                <h4>Cuentas Bancarias</h4>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-            <div id="defaultPortlet" class="panel-collapse collapse in">
-              <div class="portlet-body">
-                <g:render template="bankAccounts" />
               </div>
             </div>
             <div class="portlet-footer">

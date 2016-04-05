@@ -1,4 +1,4 @@
-//= require third-party/jquery/dist/jquery.js
+ //= require third-party/jquery/dist/jquery.js
 
 var HomeController = (function(){
 

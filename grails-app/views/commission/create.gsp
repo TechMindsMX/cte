@@ -59,7 +59,7 @@
         </div>
       </div>
     </div>
-    <g:link controller="company" action="show" id="${session.company}" class="home btn btn-default">
+    <g:link controller="company" action="show" id="${session.company ?: params.companyId}" class="home btn btn-default">
     <g:message code="company.show"/>
     </g:link>
     <g:link class="list btn btn-default" action="index" params="[companyId:"${company.id}"]">

@@ -62,7 +62,13 @@
                   <g:if test="${available && legalRepresentativesAvilableWithDocuments}">
                     <g:link controller="requestCompany" action="create" class="btn btn-success btn-block" params="[companyId:company.id]">Enviar mi Solicitud</g:link>
                   </g:if>
+                  <g:else>
+                    <div align="center">
+                      <font color="red" size="3">Aun no cuentas con todos los detalles para enviar tu solicitud</font>
+                    </div>
+                  </g:else>
                   <g:if test="${company.status == CompanyStatus.REJECTED}">
+                  <br />
                     <g:link action="rejected" class="btn btn-default" id="${company.id}">Revisar Razones de Rechazo</g:link>
                   </g:if>
                 </sec:ifAnyGranted>

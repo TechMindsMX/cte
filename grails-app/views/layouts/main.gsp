@@ -106,7 +106,6 @@
                     <li><g:link controller="user" action="manageusers">Lista de Usuarios</g:link></li>
                   </ul>
                 </li> <!--ENDOF LI.PANEL -->
-            </g:if>
             <g:if test="${companyInfo.isAvailableForOperationInThisCompany() == "true"}">
             <li class="panel">
               <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#registros">
@@ -139,6 +138,7 @@
                 </li>
               </ul>
             </li> <!--ENDOF LI.PANEL -->
+            </g:if>
             </g:if>
           </sec:ifAnyGranted>
 

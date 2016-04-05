@@ -45,7 +45,7 @@
           </g:link>
         </label>
         <g:if test="${company.taxRegime == CompanyTaxRegime.MORAL}">
-        <!--div class="col-sm-7">
+        <div class="col-sm-7">
           <sec:ifAnyGranted roles="ROLE_INTEGRADO">
             <div class="col-sm-4">
               <a href='${createLink(controller:"uploadDocuments",action:"create",params:[company:"${company.id}",user:"${representante.id}"])}' class="btn btn-default">Agregar Documentos</a>
@@ -56,7 +56,7 @@
               </g:if>
             </div>
           </sec:ifAnyGranted>
-        </div-->
+        </div>
         <sec:ifAnyGranted roles="ROLE_ADMIN">
           <div class="col-sm-3">
             <g:link action="showDocumentLegalRepresentative" controller="uploadDocuments" params="[user:representante.id,companyId:company.id]" class="btn btn-default">Visor de Documentos</g:link>

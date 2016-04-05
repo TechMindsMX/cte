@@ -13,12 +13,12 @@ class BootStrap {
 
   def init = { servletContext ->
     saveBanksInfo()
-    //createUuidToCompanyWithUuidNull()
-    //if (!User.count()) {
-    //  createUserWithRole('admin', 'admin', 'admin@email.com', 'ROLE_ADMIN')
-    //  createUserWithRole('integrado', 'admin', 'integrado@email.com', 'ROLE_INTEGRADO')
-    //  createUserWithRole('autorizador', 'autorizador', 'autorizador@email.com', 'ROLE_INTEGRADO_AUTORIZADOR')
-    //}
+    createUuidToCompanyWithUuidNull()
+    if (!User.count()) {
+      createUserWithRole('admin', 'admin', 'admin@email.com', 'ROLE_ADMIN')
+      createUserWithRole('integrado', 'admin', 'integrado@email.com', 'ROLE_INTEGRADO')
+      createUserWithRole('autorizador', 'autorizador', 'autorizador@email.com', 'ROLE_INTEGRADO_AUTORIZADOR')
+    }
   }
 
   def destroy = {

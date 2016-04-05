@@ -7,5 +7,5 @@ databaseChangeLog = {
     include file: 'adding_role_integrado.groovy'
     include file: 'adding_role_integrado_operador.groovy'
     include file: 'adding_role_operador_iecce.groovy'
-
+    include file: 'adding_role_legal_representative.groovy'
 }

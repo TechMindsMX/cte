@@ -84,7 +84,7 @@ class UserService {
     telephone.number = params.number
     telephone.extension = params.extension
     telephone.type = params.type
-    telephone.save(failOnError:true)
+    telephone.save()
     telephone
   }
 

@@ -15,7 +15,7 @@
         <div class="col-md-6 col-md-offset-3">
           <div class="login-banner text-center">
             <h1>
-              <asset:image src="logo-iecce-blank.png" class="shadow" />
+              <asset:image width="25%" src="Logo-ModulusUno-vFINAL-big.png"/>
             </h1>
           </div>
           <div class="portlet portlet-green">
@@ -27,11 +27,13 @@
             </div>
             <div class="portlet-body">
               <g:if test="${flash.message}">
-              <div class="message" role="status">${flash.message}</div>
+                <div class="message" role="status">${flash.message}</div>
               </g:if>
-              <f:display bean="user" property="username" wrapper="show" />
-              <f:display bean="user" property="profile.fullName" wrapper="show" />
-              <f:display bean="user" property="profile.email" wrapper="show" />
+              <div class="row-fluid">
+                <f:display bean="user" property="username" wrapper="detail" />
+                <f:display bean="user" property="profile.fullName" wrapper="detail" />
+                <f:display bean="user" property="profile.email" wrapper="detail" />
+              </div>
               <g:if test="${user.profile.telephones}" >
               <li class="fieldcontain">
               <span id="telefono-label" class="property-label">Telefonos</span>
@@ -45,6 +47,12 @@
               </div>
               </li>
               </g:if>
+              <g:if test="${!company}">
+              <div align="center">
+                <g:link uri="/" class="btn btn-primary" align="center">Regresar al Inicio</g:link>
+              </div>
+              </g:if>
+              <br /><br />
             </div>
           </div>
         </div>

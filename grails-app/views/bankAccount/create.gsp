@@ -74,7 +74,7 @@
               </g:if><g:else>
 
               <f:display id="clabe" bean="bankAccount" property="clabe" label="${message(code:"bankAccount.clabe")}" wrapper="edit" />
-              <f:display id="branchNumber" bean="bankAccount" property="branchNumber" label="${message(code:"bankAccount.branchNumber")}" wrapper="editReadOnly" />
+              <f:display id="branchNumber" bean="bankAccount" property="branchNumber" label="${message(code:"bankAccount.branchNumber")}" wrapper="edit" />
               <f:display id="accountNumber" bean="bankAccount" property="accountNumber" label="${message(code:"bankAccount.accountNumber")}" wrapper="editReadOnly" />
               <input id="bank" name="bank" type="hidden"/>
               <div class="form-group">

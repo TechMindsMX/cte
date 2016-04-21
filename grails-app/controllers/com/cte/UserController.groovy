@@ -62,7 +62,7 @@ class UserController {
 
     user.profile = profile
     def userRole = Role.findWhere(authority: 'ROLE_INTEGRADO')
-    
+
     if(params.legal){
       userRole = Role.findWhere(authority: 'ROLE_LEGAL_REPRESENTATIVE')
       companyService.addingLegalRepresentativeToCompany(company, user)
@@ -70,7 +70,6 @@ class UserController {
     if (params.authorize)
       userRole = Role.get(params.roleId)
 
-    println userRole  
     userService.save(user, userRole)
     if (params.authorize)
       companyService.addingActorToCompany(company, user)

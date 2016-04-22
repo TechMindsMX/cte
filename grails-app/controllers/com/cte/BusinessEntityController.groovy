@@ -128,7 +128,7 @@ class BusinessEntityController {
     params.sepomexUrl = grails.util.Holders.grailsApplication.config.sepomex.url
     LeadType relation = businessEntityService.getClientProviderType(businessEntity.rfc)
     def banco = Bank.findByBankingCode(businessEntity.names.find{ val -> val['type'] == NameType.BANCO}?.value ?: 0)
-    respond businessEntity, model:[relation:relation.toString(),banco:banco]
+    respond businessEntity, model:[relation:relation.toString(),banco:banco,businessEntity:businessEntity]
   }
 
   @Transactional

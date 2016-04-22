@@ -22,6 +22,8 @@ class CompanySpec extends Specification {
     where:
       rfc             | bussinessName   |  webSite        | employeeNumbers | grossAnnualBilling || result
       "ROS861224NHA" | "outsourcing" | "www.yahoo.com"  | 48              | 212.23                || true
+      "GOSO7507198V2" | "outsourcing" | "www.yahoo.com"  | 48              | 212.23                || true
+      "GAL121030684" | "outsourcing" | "www.yahoo.com"  | 48              | 212.23                || true
       "rODS861224NHA" | "prueba1"     | "www.h2.com"     | 30              | 1                     || false
       "RODS861224Nha" | "prueba2"     | "www.h2.com"     | 30              | 1                     || false
       "RODS12121NHA"  | "prueba3"     | "www.h2.com"     | 30              | 1                     || false
@@ -33,7 +35,7 @@ class CompanySpec extends Specification {
       "ROS121212NHA" | "prueba7"     | "www.h2.com"     | 50              | 1                     || true
       "ROS121212NHA" | "prueba8"     | "www.h2.com"     | 50              | 250000000             || true
       "RODS121212NHA" | "prueba9"     | "www.h2.com"     | 50              | 250000000.01          || false
-      "RODS121212NHA" | "prueba11"    | "www.h2.com"     | 50              | null                  || false
+      "GOSO7507198V2" | "prueba11"    | "www.h2.com"     | 50              | null                  || false
   }
 
 }

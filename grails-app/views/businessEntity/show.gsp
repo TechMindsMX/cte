@@ -9,10 +9,10 @@
   </head>
   <body>
     <div class="page-title">
-       <h1><g:message code="businessEntity.view.show.label" /></h1>
+      <h1><g:message code="businessEntity.view.show.label" args="${[relation]}" /></h1>
         <ol class="breadcrumb">
           <li><i class="fa fa-caret-square-o-up"></i> Compañia</li>
-          <li class="active"><g:message code="businessEntity.view.show.label" /></li>
+          <li class="active"><g:message code="businessEntity.view.show.label" args="${[relation]}" /></li>
         </ol>
       </div>
       <div id="edit-address" class="content scaffold-edit" role="main">
@@ -34,7 +34,6 @@
             <g:if test="${!relation.equals('EMPLEADO')}">
             <f:display bean="businessEntity" property="website" wrapper="show"/>
             </g:if>
-
             <g:if test="${businessEntity.type == BusinessEntityType.FISICA}">
             <g:each var="name" in="${businessEntity.names}">
             <g:if test="${name.type == NameType.NOMBRE}">

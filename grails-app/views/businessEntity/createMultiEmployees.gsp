@@ -8,7 +8,7 @@
     </head>
     <body>
       <div class="page-title">
-       <h1><g:message code="businessEntity.view.create.label" /></h1>
+       <h1><g:message code="businessEntity.view.create.multi.employees.label" /></h1>
         <ol class="breadcrumb">
           <li><i class="fa fa-caret-square-o-up"></i> Compañia</li>
           <li class="active"><g:message code="businessEntity.view.create.multi.employees.label" /></li>

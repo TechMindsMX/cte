@@ -83,9 +83,12 @@ class BusinessEntityController {
     def company = Company.findById(session.company.toLong())
     LeadType leadType = LeadType."${params.clientProviderType}"
     if(params.persona == 'fisica'){
-      businessEntityService.appendNamesToBusinessEntity(businessEntity, (String[])[params.name, params.lastName, params.motherLastName,params.numeroEmpleado,params.banco,params.clabe,params.cuenta])
+      businessEntityService.appendNamesToBusinessEntity(businessEntity, (String[])[params.name, params.lastName, params.motherLastName,params.numeroEmpleado])
     } else {
       businessEntityService.appendDataToBusinessEntity(businessEntity, params.businessName)
+    }
+
+    if (params.numeroEmpleado && params.banco && params.clabe && params.cuenta){
     }
 
     if(leadType == LeadType.CLIENTE || leadType == LeadType.CLIENTE_PROVEEDOR){

@@ -80,7 +80,7 @@
 </g:if>
 
 <g:if test="${clientProviderType == LeadType.EMPLEADO.toString()}" >
-<g:if test="${!businessEntity.names.find{ val -> val['type'] == NameType.NUMERO_EMPLEADO}?.value}" >
+  <g:if test="${!businessEntity.names.find{ val -> val['type'] == NameType.NUMERO_EMPLEADO}?.value}" >
   <div class="fieldcontain fisica">
     <label id="clabeLabel">
       <g:message code="businessEntity.clabe" /><span class="required-indicator">*</span>

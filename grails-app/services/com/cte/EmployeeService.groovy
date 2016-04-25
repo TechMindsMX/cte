@@ -48,8 +48,8 @@ class EmployeeService {
     def businessEntity = new BusinessEntity(rfc:employee[1],website:"http://www.employee.com",type:BusinessEntityType.FISICA)
     def names = (String[])[employee[2],employee[3],employee[4],employee[0]]
     def businessEntityResult =  businessEntityService.appendNamesToBusinessEntity(businessEntity,names)
-    Map properties = ["clabe": employee[6]]
-    def bankAccountCommand = bankAccountService.createABankAccountCommandByParams(properties)
+    Map properties = ["clabe": employee[7]]
+    businessEntityService.createBankAccountAndAddToBusinesEntity(properties,businessEntity)
   }
 
 }

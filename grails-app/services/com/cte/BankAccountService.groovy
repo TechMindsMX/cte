@@ -5,6 +5,22 @@ import grails.transaction.Transactional
 @Transactional
 class BankAccountService {
 
+  def createABankAccount(BankAccountCommand command){
+    def bankAccount = command.createBankAccount()
+    bankAccount.banco = Bank.findByBankingCode(command.bank)
+    bankAccount
+  }
+
+
+  def createABankAccountCommandByParams(Map properties){
+    def command = new BankAccountCommand()
+    command.accountNumber = properties.clabe.substring(6,17)
+    command.branchNumber = properties.clabe.substring(3,6)
+    command.bank = Bank.findByBankingCodeLike("%${properties.clabe.substring(0,3)}").bankingCode
+    command.clabe = properties.clabe
+    command
+  }
+
   def repeatedBankAccountCompany(BankAccount bankAccount, Company company){
     def repeatedAccount = company.banksAccounts.find{ cuenta ->
       cuenta.banco.id == bankAccount.banco.id && cuenta.accountNumber == bankAccount.accountNumber && cuenta.id != bankAccount.id

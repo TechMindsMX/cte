@@ -130,9 +130,9 @@ class DocumentService {
                     payroll.employee.names.find{ val -> val['type'] == NameType.NUMERO_EMPLEADO}?.value,
                     payroll.employee.toString(),
                     payroll.amount,
-                    payroll.employee.names.find{ val -> val['type'] == NameType.BANCO}?.value,
-                    payroll.employee.names.find{ val -> val['type'] == NameType.CUENTA}?.value,
-                    payroll.employee.names.find{ val -> val['type'] == NameType.CLABE}?.value
+                    payroll.employee.banksAccounts.first().banco.name,
+                    payroll.employee.banksAccounts.first().accountNumber,
+                    payroll.employee.banksAccounts.first().clabe
                   ]
 
     addRecordToWorkbook(workbook,fields)

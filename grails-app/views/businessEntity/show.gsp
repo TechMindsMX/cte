@@ -75,33 +75,7 @@
                 </div>
               </li>
             </g:if>
-            <g:set var="clabe" value="${businessEntity.names.find{ val -> val['type'] == NameType.CLABE}}" />
-            <g:if test="${clabe}">
-              <li class="fieldcontain">
-                <span id="lastName-label" class="property-label">Cuenta Clabe</span>
-                <div class="property-value" aria-labelledby="lastName-label">
-                  ${clabe.value}
-                </div>
-              </li>
-            </g:if>
-            <g:set var="cuenta" value="${businessEntity.names.find{ val -> val['type'] == NameType.CUENTA}}" />
-            <g:if test="${cuenta}">
-              <li class="fieldcontain">
-                <span id="lastName-label" class="property-label">Cuenta</span>
-                <div class="property-value" aria-labelledby="lastName-label">
-                  ${cuenta.value}
-                </div>
-              </li>
-            </g:if>
-            <g:if test="${banco}">
-              <li class="fieldcontain">
-                <span id="lastName-label" class="property-label">Banco</span>
-                <div class="property-value" aria-labelledby="lastName-label">
-                  ${banco.name}
-                </div>
-              </li>
-            </g:if>
-            <g:if test="${businessEntity.type == BusinessEntityType.MORAL}">
+           <g:if test="${businessEntity.type == BusinessEntityType.MORAL}">
               <g:each var="name" in="${businessEntity.names}">
               <g:if test="${name.type == NameType.RAZON_SOCIAL}">
               <li class="fieldcontain">

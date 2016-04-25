@@ -71,7 +71,7 @@
       <g:message code="businessEntity.numeroEmpleado" /><span class="required-indicator">*</span>
     </label>
     <g:if test="${businessEntity.names.find{ it -> it['type'] == NameType.NUMERO_EMPLEADO}}">
-      <input id="numeroEmpleado" name="numeroEmpleado" value="${businessEntity.names.find{ val -> val['type'] == NameType.NUMERO_EMPLEADO}}" class="form-control" />
+      <input id="numeroEmpleado" name="numeroEmpleado" value="${businessEntity.names.find{ val -> val['type'] == NameType.NUMERO_EMPLEADO}.value}" class="form-control" />
     </g:if>
     <g:else>
       <input id="numeroEmpleado" name="numeroEmpleado" class="form-control" value="${params.numeroEmpleado}" />
@@ -80,45 +80,28 @@
 </g:if>
 
 <g:if test="${clientProviderType == LeadType.EMPLEADO.toString()}" >
+<g:if test="${!businessEntity.names.find{ val -> val['type'] == NameType.NUMERO_EMPLEADO}?.value}" >
   <div class="fieldcontain fisica">
     <label id="clabeLabel">
       <g:message code="businessEntity.clabe" /><span class="required-indicator">*</span>
     </label>
-    <g:if test="${businessEntity.names.find{ it -> it['type'] == NameType.CLABE}}">
-      <input id="clabe" name="clabe" value="${businessEntity.names.find{ val -> val['type'] == NameType.CLABE}}" class="form-control" />
-    </g:if>
-    <g:else>
       <input id="clabe" name="clabe" class="form-control" value="${params.clabe}" />
-    </g:else>
   </div>
-</g:if>
 
-<g:if test="${clientProviderType == LeadType.EMPLEADO.toString()}" >
   <div class="fieldcontain fisica">
     <label id="bancoLabel">
       <g:message code="businessEntity.banco" /><span class="required-indicator">*</span>
     </label>
-    <g:if test="${businessEntity.names.find{ it -> it['type'] == NameType.BANCO}}">
-      <input id="banco" name="banco" value="${businessEntity.names.find{ val -> val['type'] == NameType.BANCO}}" class="form-control" />
-    </g:if>
-    <g:else>
       <g:select name="banco" from="${banks}" optionValue="name" optionKey="bankingCode" class="form-control" aria-controls="example-table" required="" noSelection="['':'']" value="${bankAccount?.banco?.bankingCode}"/>
-    </g:else>
   </div>
-</g:if>
 
-<g:if test="${clientProviderType == LeadType.EMPLEADO.toString()}" >
   <div class="fieldcontain fisica">
     <label id="cuentaLabel">
       <g:message code="businessEntity.cuenta" /><span class="required-indicator">*</span>
     </label>
-    <g:if test="${businessEntity.names.find{ it -> it['type'] == NameType.CUENTA}}">
-      <input id="cuenta" name="cuenta" value="${businessEntity.names.find{ val -> val['type'] == NameType.CUENTA}}" class="form-control" />
-    </g:if>
-    <g:else>
       <input id="accountNumber" name="cuenta" class="form-control" value="${params.cuenta}" />
-    </g:else>
   </div>
+  </g:if>
 </g:if>
 
 <div class="fieldcontain moral">

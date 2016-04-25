@@ -8,6 +8,7 @@ class BusinessEntityService {
   def clientService
   def providerService
   def employeeService
+  def bankAccountService
 
   def appendNamesToBusinessEntity(BusinessEntity businessEntity, String[] properties) {
     def name = new ComposeName(value:properties[0], type:NameType.NOMBRE)
@@ -28,6 +29,14 @@ class BusinessEntityService {
     businessEntity.addToNames(new ComposeName(value:businessName, type:NameType.RAZON_SOCIAL))
     businessEntity.save()
     businessEntity
+  }
+
+  def createBankAccountAndAddToBusinesEntity(Map properties,BusinessEntity businessEntity) {
+    def bankAccountCommand = bankAccountService.createABankAccountCommandByParams(properties)
+    def bankAccount = bankAccountService.createABankAccount(bankAccountCommand)
+    bankAccount.save()
+    businessEntity.addToBanksAccounts(bankAccount)
+    businessEntity.save()
   }
 
   def createAddressForBusinessEntity(Address address, Long businessEntityId) {

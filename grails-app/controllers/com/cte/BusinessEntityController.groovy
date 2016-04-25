@@ -89,6 +89,8 @@ class BusinessEntityController {
     }
 
     if (params.numeroEmpleado && params.banco && params.clabe && params.cuenta){
+      Map propertie = ["clabe":params.clabe]
+      businessEntityService.createBankAccountAndAddToBusinesEntity(propertie,businessEntity)
     }
 
     if(leadType == LeadType.CLIENTE || leadType == LeadType.CLIENTE_PROVEEDOR){
@@ -130,8 +132,7 @@ class BusinessEntityController {
   def show(BusinessEntity businessEntity) {
     params.sepomexUrl = grails.util.Holders.grailsApplication.config.sepomex.url
     LeadType relation = businessEntityService.getClientProviderType(businessEntity.rfc)
-    def banco = Bank.findByBankingCode(businessEntity.names.find{ val -> val['type'] == NameType.BANCO}?.value ?: 0)
-    respond businessEntity, model:[relation:relation.toString(),banco:banco,businessEntity:businessEntity]
+    respond businessEntity, model:[relation:relation.toString(),businessEntity:businessEntity]
   }
 
   @Transactional

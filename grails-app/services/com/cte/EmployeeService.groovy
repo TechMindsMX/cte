@@ -46,8 +46,10 @@ class EmployeeService {
 
   def generateEmployee(def employee) {
     def businessEntity = new BusinessEntity(rfc:employee[1],website:"http://www.employee.com",type:BusinessEntityType.FISICA)
-    def names = (String[])[employee[2],employee[3],employee[4],employee[0],employee[5],employee[6],employee[7]]
-    businessEntityService.appendNamesToBusinessEntity(businessEntity,names)
+    def names = (String[])[employee[2],employee[3],employee[4],employee[0]]
+    def businessEntityResult =  businessEntityService.appendNamesToBusinessEntity(businessEntity,names)
+    Map properties = ["clabe": employee[6]]
+    def bankAccountCommand = bankAccountService.createABankAccountCommandByParams(properties)
   }
 
 }

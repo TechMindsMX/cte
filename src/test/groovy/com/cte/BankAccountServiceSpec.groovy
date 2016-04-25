@@ -58,4 +58,35 @@ class BankAccountServiceSpec extends Specification {
 
   }
 
+  Should "create a bank accoutn command with a clabe"() {
+    given:
+      Map properties = ["clabe": "002115016003269411"]
+      new Bank(bankingCode:"40002",name:"BANAMEX").save()
+      new Bank(bankingCode:"40003",name:"BANCOMER").save()
+    when:
+      def commandResult = service.createABankAccountCommandByParams(properties)
+    then:
+      commandResult.clabe == properties.clabe
+      commandResult.bank.contains(properties.clabe.substring(0,3))
+
+  }
+
+  Should "creatre a Bank account by command"() {
+    given:
+      new Bank(bankingCode:"40002",name:"BANAMEX").save()
+      new Bank(bankingCode:"40003",name:"BANCOMER").save()
+    and:
+      def clabe = "002115016003269411"
+      def command = new BankAccountCommand()
+      command.accountNumber = clabe.substring(6,17)
+      command.branchNumber = clabe.substring(3,6)
+      command.bank = Bank.findByBankingCodeLike("%${clabe.substring(0,3)}").bankingCode
+      command.clabe = clabe
+    when:
+      def bankAccount = service.createABankAccount(command)
+    then:
+      bankAccount.save()
+      bankAccount.id == 1
+  }
+
 }

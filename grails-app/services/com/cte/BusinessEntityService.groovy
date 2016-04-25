@@ -10,19 +10,12 @@ class BusinessEntityService {
   def employeeService
 
   def appendNamesToBusinessEntity(BusinessEntity businessEntity, String[] properties) {
-    println properties.dump()
     def name = new ComposeName(value:properties[0], type:NameType.NOMBRE)
     def lastName = new ComposeName(value:properties[1], type:NameType.APELLIDO_PATERNO)
     def motherLastName = new ComposeName(value:properties[2], type:NameType.APELLIDO_MATERNO)
     if (properties.length > 3) {
-        if (properties[3])
-          businessEntity.addToNames(new ComposeName(value:properties[3], type:NameType.NUMERO_EMPLEADO))
-        if (properties[4])
-          businessEntity.addToNames(new ComposeName(value:properties[4], type:NameType.BANCO))
-        if (properties[5])
-          businessEntity.addToNames(new ComposeName(value:properties[5], type:NameType.CUENTA))
-        if (properties[6])
-          businessEntity.addToNames(new ComposeName(value:properties[6], type:NameType.CLABE))
+      if (properties[3])
+        businessEntity.addToNames(new ComposeName(value:properties[3], type:NameType.NUMERO_EMPLEADO))
     }
     businessEntity.addToNames(name)
     businessEntity.addToNames(lastName)

@@ -24,7 +24,7 @@ class BankAccountController {
 
   @Transactional
   def save(BankAccountCommand command) {
-    def bankAccount = bankAccountService.createBankAccount(command)
+    def bankAccount = bankAccountService.createABankAccount(command)
 
     if(bankAccount.hasErrors()) {
       transactionStatus.setRollbackOnly()

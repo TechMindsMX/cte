@@ -39,9 +39,10 @@ class PayrollController {
   }
 
   def save() {
+    def company = Company.findById(session.company.toLong())
     def rowListOfDocument = readDocumentService.readExcel(params.documentExcel)
     def payrollList = payrollService.schedulingPayrolls(rowListOfDocument)
-    processorPayrollService.createRelationIntoPayrolls(payrollList,params.documentExcel.getOriginalFilename())
+    processorPayrollService.createRelationIntoPayrolls(payrollList,params.documentExcel.getOriginalFilename(),company)
     redirect (action: "index")
   }
 

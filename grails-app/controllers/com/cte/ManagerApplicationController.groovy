@@ -32,7 +32,7 @@ class ManagerApplicationController {
 
   def list() {
     def companies = companyService.allCompaniesByStatus(CompanyStatus.ACCEPTED)
-    render view:"/company/index", model:[companyList:companies,companyCout:companies.size()]
+    render view:"/company/list", model:[companyList:companies,companyCout:companies.size()]
   }
 
   def invalid() {

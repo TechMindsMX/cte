@@ -4,6 +4,8 @@ class ProcessorPayroll {
 
   String nameFile
 
+  Company company
+
   Date dateCreated
   Date lastUpdated
 

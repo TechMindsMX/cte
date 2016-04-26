@@ -76,4 +76,8 @@ hibernate:
 endpoints:
     jmx:
         unique-names: true
-
+grails:
+  controllers:
+    upload:
+      maxFileSize: 100000000
+      maxRequestSize: 200000000

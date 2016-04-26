@@ -62,7 +62,7 @@
                   <g:if test="${available && legalRepresentativesAvilableWithDocuments}">
                     <g:link controller="requestCompany" action="create" class="btn btn-success btn-block" params="[companyId:company.id]">Enviar mi Solicitud</g:link>
                   </g:if>
-                  <g:if test="${company.status == CompanyStatus.CREATED}">
+                  <g:if test="${company.status == CompanyStatus.CREATED && !available}">
                     <div align="center">
                       <font color="red" size="3">Aun no cuentas con todos los detalles para enviar tu solicitud</font>
                     </div>

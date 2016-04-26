@@ -112,12 +112,12 @@
                 Registros <i class="fa fa-caret-down"></i>
               </a>
               <ul class="collapse nav" id="registros">
-                <li>
+                <!--li>
                   <g:link action="create" controller="businessEntity" params='[type:"${com.cte.LeadType.CLIENTE}"]' ><i class="fa fa-angle-double-right"> </i>Alta Cliente</g:link>
                 </li>
                 <li>
                   <g:link action="create" controller="businessEntity"  params='[type:"${com.cte.LeadType.PROVEEDOR}"]'><i class="fa fa-angle-double-right"> </i>Alta Proveedor</g:link>
-                </li>
+                </li-->
                 <li>
                   <g:link action="create" controller="businessEntity"  params='[type:"${com.cte.LeadType.EMPLEADO}"]'><i class="fa fa-angle-double-right"> </i>Alta Empleado</g:link>
                 </li>
@@ -127,15 +127,15 @@
                 <li>
                   <g:link action="processorPayroll" controller="payroll" ><i class="fa fa-angle-double-right"> </i>Listado de Archivos procesados</g:link>
                 </li>
-                <li>
+                <!--li>
                   <g:link action="create" controller="product"><i class="fa fa-angle-double-right"> </i>Alta Producto/Servicio</g:link>
-                </li>
+                </li-->
                 <li>
                   <g:link controller="businessEntity" action="index"><i class="fa fa-angle-double-right"> </i>Lista de Relaciones Comerciales</g:link>
                 </li>
-                <li>
+                <!--li>
                   <g:link controller="product" action="index"><i class="fa fa-angle-double-right"> </i>Mis Productos/Servicios</g:link>
-                </li>
+                </li-->
               </ul>
             </li> <!--ENDOF LI.PANEL -->
             </g:if>
@@ -153,9 +153,9 @@
                     <!--li>
                       <g:link controller="company" action="accountstatement" ><i class="fa fa-angle-double-right"></i> <g:message code="Estado de Cuenta" default="Estado de Cuenta" /></g:link>
                     </li-->
-                    <li class="panel">
+                    <!--li class="panel">
                       <a href="javascript:;" data-parent="#operaciones" data-toggle="collapse" class="accordion-toggle" data-target="#ordenesDeposito">
-                        Órdenes de Depósito <i class="fa fa-caret-down"></i>
+                        Depósito <i class="fa fa-caret-down"></i>
                       </a>
                       <ul class="collapse nav" id="ordenesDeposito">
                         <li>
@@ -169,7 +169,7 @@
                     <li>
                     <li class="panel">
                       <a href="javascript:;" data-parent="#operaciones" data-toggle="collapse" class="accordion-toggle" data-target="#cashoutOrder">
-                        Órdenes de Retiro<i class="fa fa-caret-down"></i>
+                        Retiro<i class="fa fa-caret-down"></i>
                       </a>
                       <ul class="collapse nav" id="cashoutOrder">
                         <li>
@@ -182,7 +182,7 @@
                     </li>
                     <li class="panel">
                       <a href="javascript:;" data-parent="#operaciones" data-toggle="collapse" class="accordion-toggle" data-target="#saleOrder">
-                        Órdenes de Facturación y Cobranza<i class="fa fa-caret-down"></i>
+                        Facturación y Cobranza<i class="fa fa-caret-down"></i>
                       </a>
                       <ul class="collapse nav" id="saleOrder">
                         <li>
@@ -195,10 +195,10 @@
                           <g:link controller="payment" action="reconcile"><i class="fa fa-angle-double-right"></i>Conciliaciones</g:link>
                         </li>
                       </ul>
-                    </li>
+                    </li-->
                     <li class="panel">
                       <a href="javascript:;" data-parent="#operaciones" data-toggle="collapse" class="accordion-toggle" data-target="#payroll">
-                        Dispercion de Fondos<i class="fa fa-caret-down"></i>
+                        Disperción de Fondos<i class="fa fa-caret-down"></i>
                       </a>
                       <ul class="collapse nav" id="payroll">
                         <li>
@@ -211,9 +211,9 @@
                       </ul>
                     </li>
 
-                    <li class="panel">
+                    <!--li class="panel">
                       <a href="javascript:;" data-parent="#operaciones" data-toggle="collapse" class="accordion-toggle" data-target="#ordenesCompra">
-                        Órdenes de Pago a Proveedores <i class="fa fa-caret-down"></i>
+                        Pago a Proveedores <i class="fa fa-caret-down"></i>
                       </a>
                       <ul class="collapse nav" id="ordenesCompra">
                         <li>
@@ -226,7 +226,7 @@
                     </li>
                     <li class="panel">
                       <a href="javascript:;" data-parent="#operaciones" data-toggle="collapse" class="accordion-toggle" data-target="#ordenesReembolso">
-                        Órdenes de Reembolso <i class="fa fa-caret-down"></i>
+                        Reembolso <i class="fa fa-caret-down"></i>
                       </a>
                       <ul class="collapse nav" id="ordenesReembolso">
                         <li>
@@ -253,7 +253,7 @@
                           </g:link>
                         </li>
                       </ul>
-                    </li>
+                    </li-->
                   </ul>
                 <li>
               </g:if>

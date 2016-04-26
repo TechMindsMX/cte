@@ -86,9 +86,11 @@
                           <div class="col-md-3">
                             <button type="button" class="btn btn-primary document" path="${document.localUrl}" data-toggle="modal" data-target="#myModal"><g:message code="document.type.${document.type}"/></button>
                           </div>
-                          <div class="col-md-2">
-                            <input type="checkbox" class="document-rejected" id="${document.id}" value="${document.id}"> Rechazado
-                          </div>
+                          <g:if test="${company.status != CompanyStatus.ACCEPTED}">
+                            <div class="col-md-2">
+                              <input type="checkbox" class="document-rejected" id="${document.id}" value="${document.id}"> Rechazado
+                            </div>
+                          </g:if>
                           <div class="col-md-5">
                             <textarea rows="2" cols="50" placeholder="Razón de rechazo" name="legalRepresentative-${document.id}" class="form-control reason-${document.id}" style="overflow:auto;resize:none;display:none;"></textarea>
                           </div>
@@ -109,9 +111,11 @@
                         <div class="col-md-3">
                           <button type="button" class="btn btn-primary document" path="${document.localUrl}" data-toggle="modal" data-target="#myModal"><g:message code="document.type.${document.type}"/></button>
                         </div>
-                        <div class="col-md-3">
-                          <input type="checkbox" class="document-rejected" id="${document.id}" value="${document.id}"> Rechazado
-                        </div>
+                        <g:if test="${company.status != CompanyStatus.ACCEPTED}">
+                          <div class="col-md-3">
+                            <input type="checkbox" class="document-rejected" id="${document.id}" value="${document.id}"> Rechazado
+                          </div>
+                        </g:if>
                         <div class="col-md-5">
                           <textarea rows="2" cols="50" placeholder="Razon de rechazo" name="document-${document.id}" class="form-control reason-${document.id}" style="overflow:auto;resize:none;display:none;"></textarea>
                         </div>
@@ -120,20 +124,22 @@
                     </g:each>
                   </div>
                 </li>
-                <li class="fieldcontain">
-                  <span id="address-label" class="property-label">Otra Razón del Rechazo</span>
-                  <div class="property-value" aria-labelledby="${label}-label">
-                    <textarea name="reason" style="overflow:auto;resize:none" class="form-control" rows="3"></textarea>
-                  </div>
-                </li>
-                <input type="hidden" value="${company.id}" name="companyId" />
-                <br />
-                <li class="fieldcontain">
-                  <div class="property-value">
-                    <g:link controller="commission" action="create" class="btn btn-success" params="[companyId:company.id]">Continuar y dar de alta comisiones</g:link>
-                    <input class="btn btn-danger" type="submit" value="Rechazar Solicitud" />
-                  </div>
-                </li>
+                <g:if test="${company.status != CompanyStatus.ACCEPTED}">
+                  <li class="fieldcontain">
+                    <span id="address-label" class="property-label">Otra Razón del Rechazo</span>
+                    <div class="property-value" aria-labelledby="${label}-label">
+                      <textarea name="reason" style="overflow:auto;resize:none" class="form-control" rows="3"></textarea>
+                    </div>
+                  </li>
+                  <input type="hidden" value="${company.id}" name="companyId" />
+                  <br />
+                  <li class="fieldcontain">
+                    <div class="property-value">
+                      <g:link controller="commission" action="create" class="btn btn-success" params="[companyId:company.id]">Continuar y dar de alta comisiones</g:link>
+                      <input class="btn btn-danger" type="submit" value="Rechazar Solicitud" />
+                    </div>
+                  </li>
+                </g:if>
               </g:form>
             </ol>
             <div class="nav" role="navigation">

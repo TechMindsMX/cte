@@ -124,9 +124,6 @@
                 <li>
                   <g:link action="createMultiEmployees" controller="businessEntity" ><i class="fa fa-angle-double-right"> </i>Alta Multiples Empleados</g:link>
                 </li>
-                <li>
-                  <g:link action="processorPayroll" controller="payroll" ><i class="fa fa-angle-double-right"> </i>Listado de Archivos procesados</g:link>
-                </li>
                 <!--li>
                   <g:link action="create" controller="product"><i class="fa fa-angle-double-right"> </i>Alta Producto/Servicio</g:link>
                 </li-->
@@ -273,14 +270,15 @@
           <sec:ifAnyGranted roles="ROLE_ADMIN, ROLE_ADMIN_IECCE">
           <li class="panel">
             <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#reportes">
-              Reportes <i class="fa fa-caret-down"></i>
+              Operaciones<i class="fa fa-caret-down"></i>
             </a>
             <ul class="collapse nav" id="reportes">
-              <li><a href="#">Movimientos</a></li>
-              <li><a href="#">Facturación y Cobranzas</a></li>
-              <li><a href="#">Compras</a></li>
-              <li><a href="#">Órdenes por conciliar</a></li>
-              <li><a href="#">Órdenes por autorizar</a></li>
+              <li>
+                <g:link action="processorPayroll" controller="payroll" ><i class="fa fa-angle-double-right"> </i>Listado de Archivos procesados</g:link>
+              </li>
+              <li>
+                <g:link action="list" controller="managerApplication"><i class="fa fa-angle-double-right"></i>Listado de Empresas</g:link>
+              </li>
             </ul>
           </li> <!--ENDOF LI.PANEL -->
           </sec:ifAnyGranted>

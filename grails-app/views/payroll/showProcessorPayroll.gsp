@@ -35,7 +35,7 @@
                           <th>Id</th>
                           <th><g:message code="payroll.amount" /></th>
                           <th><g:message code="payroll.applyDate" /></th>
-                          <th><g:message code="payroll.employee" /></th>
+                          <th><g:message code="payroll.company" /></th>
                         </tr>
                       </thead>
                       <tbody>
@@ -44,7 +44,7 @@
                             <td>${processorPayroll.id}</td>
                             <td>${processorPayroll.nameFile}</td>
                             <td>${processorPayroll.dateCreated.format("dd-MMMM-yyyy")}</td>
-                            <td>${processorPayroll.payrolls*.toString()}</td>
+                            <td>${processorPayroll.company}</td>
                             <td><g:link action="generetExcel" id="${processorPayroll.id}" class="btn btn-default"><i class="fa fa-file-excel-o"></i></g:link>
                           </tr>
                         </g:each>

@@ -150,7 +150,7 @@
                     <!--li>
                       <g:link controller="company" action="accountstatement" ><i class="fa fa-angle-double-right"></i> <g:message code="Estado de Cuenta" default="Estado de Cuenta" /></g:link>
                     </li-->
-                    <!--li class="panel">
+                    <li class="panel">
                       <a href="javascript:;" data-parent="#operaciones" data-toggle="collapse" class="accordion-toggle" data-target="#ordenesDeposito">
                         Depósito <i class="fa fa-caret-down"></i>
                       </a>
@@ -164,7 +164,7 @@
                       </ul>
                     </li>
                     <li>
-                    <li class="panel">
+                    <!--li class="panel">
                       <a href="javascript:;" data-parent="#operaciones" data-toggle="collapse" class="accordion-toggle" data-target="#cashoutOrder">
                         Retiro<i class="fa fa-caret-down"></i>
                       </a>

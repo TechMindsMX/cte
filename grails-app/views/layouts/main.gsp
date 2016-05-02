@@ -279,6 +279,9 @@
               <li>
                 <g:link action="list" controller="managerApplication"><i class="fa fa-angle-double-right"></i>Listado de Empresas</g:link>
               </li>
+              <li>
+                <g:link action="list" controller="depositOrder"><i class="fa fa-angle-double-right"></i>Listado de Depositos</g:link>
+              </li>
             </ul>
           </li> <!--ENDOF LI.PANEL -->
           </sec:ifAnyGranted>

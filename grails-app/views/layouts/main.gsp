@@ -257,6 +257,14 @@
             </g:if>
           </sec:ifAnyGranted>
 
+          <sec:ifAnyGranted roles="ROLE_OPERADOR_IECCE" >
+            <li>
+              <g:link action="processorPayroll" controller="payroll" ><i class="fa fa-angle-double-right"> </i>Listado de Archivos procesados</g:link>
+            </li>
+            <li>
+              <g:link action="list" controller="depositOrder" params='[status:"${com.cte.DepositOrderStatus.AUTHORIZED}"]'><i class="fa fa-angle-double-right"></i>Listado de Depositos</g:link>
+            </li>
+          </sec:ifAnyGranted>
 
 
           <sec:ifAnyGranted roles="ROLE_ADMIN, ROLE_ADMIN_IECCE">
@@ -274,9 +282,6 @@
             </a>
             <ul class="collapse nav" id="reportes">
               <li>
-                <g:link action="processorPayroll" controller="payroll" ><i class="fa fa-angle-double-right"> </i>Listado de Archivos procesados</g:link>
-              </li>
-              <li>
                 <g:link action="list" controller="managerApplication"><i class="fa fa-angle-double-right"></i>Listado de Empresas</g:link>
               </li>
               <li>
@@ -292,13 +297,7 @@
                 Autorizaciones <i class="fa fa-caret-down"></i>
               </a>
               <ul class="collapse nav" id="autorizaciones">
-                <li><g:link controller="purchaseOrder" action="list" params="[status:'POR_AUTORIZAR']" ><i class="fa fa-angle-double-right"> </i>Órdenes de Pago a Proveedores</g:link></li>
-                <li><g:link controller="saleOrder" action="showSaleOrdersByAuthorize" ><i class="fa fa-angle-double-right"> </i>Órdenes de Facturación y Cobranza</g:link></li>
-                <li><g:link controller="cashOutOrder" action="index" ><i class="fa fa-angle-double-right"> </i>Órdenes de Retiro</g:link></li>
                 <li><g:link controller="depositOrder" action="list" params="[status:'VALIDATE']" ><i class="fa fa-angle-double-right"> </i>Órdenes de Depósito</g:link></li>
-                <li><g:link controller="loanOrder" action="index" ><i class="fa fa-angle-double-right"> </i>Órdenes de Préstamo</g:link></li>
-                <li><g:link controller="purchaseOrder" action="listMoneyBackOrders" params="[status:'POR_AUTORIZAR']" ><i class="fa fa-angle-double-right"> </i>Órdenes de Reembolso</g:link></li>
-                <li><g:link controller="feesReceipt" action="list" params="[status:'CREADA']" ><i class="fa fa-angle-double-right"> </i>Recibos de Honorarios</g:link></li>
               </ul>
             </li> <!--ENDOF LI.PANEL -->
           </sec:ifAnyGranted>

@@ -18,9 +18,15 @@ class DepositOrderService {
     order.save()
   }
 
+  def authorizeAndNotifyDepositOrder(DepositOrder order) {
+      order.status = DepositOrderStatus.AUTHORIZED
+      order.save flush:true
+      notifyAuthorizationDepositOrder(order)
+  }
+
   def executeDepositOrder(DepositOrder order){
     order.status = DepositOrderStatus.EXECUTED
-    order.uuidTransaction = cashinResult.str
+    order.uuidTransaction = UUID.randomUUID().toString().replace('-','')[0..15]
     order.save()
     notifyDepositOrderWasExecuted(order)
   }

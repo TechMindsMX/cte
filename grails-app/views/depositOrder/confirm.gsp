@@ -43,7 +43,9 @@
                   </div>
                 </div>
                 <p>
-                  <input type="submit" value="Enviar Ficha de Depósito" class="btn btn-default">
+                  <sec:ifAnyGranted roles="ROLE_CONTABILIDAD">
+                    <input type="submit" value="Enviar Ficha de Depósito" class="btn btn-default">
+                  </sec:ifAnyGranted>
                 </p>
               </g:form>
               <fieldset class="buttons">

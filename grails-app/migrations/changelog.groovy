@@ -10,4 +10,5 @@ databaseChangeLog = {
     include file: 'adding_role_legal_representative.groovy'
     include file: 'adding_company_to_processor_payroll-groovy.groovy'
     include file: 'adding-table-deposit-order.groovy'
+    include file: 'adding_role_contabilidad.groovy'
 }

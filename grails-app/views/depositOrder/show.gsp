@@ -50,7 +50,7 @@
                 </li>
               </ol>
 
-              <sec:ifAnyGranted roles="ROLE_ADMIN, ROLE_ADMIN_IECCE, ROLE_INTEGRADO, ROLE_INTEGRADO_OPERADOR, ROLE_INTEGRADO_AUTORIZADOR">
+              <sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_OPERADOR_IECCE,  ROLE_ADMIN_IECCE, ROLE_INTEGRADO, ROLE_INTEGRADO_OPERADOR, ROLE_INTEGRADO_AUTORIZADOR">
                 <g:if test="${depositOrder.status != DepositOrderStatus.CREATED}">
                   <iframe id="frameView" src="${depositOrder.documents?.first().localUrl}" width="100%" height="400px"> </iframe>
                 </g:if>
@@ -93,7 +93,7 @@
                 </g:if>
               </sec:ifAnyGranted>
 
-              <sec:ifAnyGranted roles="ROLE_ADMIN, ROLE_ADMIN_IECCE">
+              <sec:ifAnyGranted roles="ROLE_ADMIN, ROLE_ADMIN_IECCE, ROLE_OPERADOR_IECCE">
                 <g:if test="${depositOrder.status == DepositOrderStatus.AUTHORIZED}">
                   <g:link action="executeDepositOrder" id="${depositOrder.id}" params="[status:'AUTHORIZED']" class="btn btn-primary"> Ejecutar Depósito</g:link>
                   <a data-toggle="collapse" role="button" href="#inputReasonRejected" class="btn btn-danger" aria-expanded="false" aria-controls="inputReasonRejected">Rechazar Depósito</a>

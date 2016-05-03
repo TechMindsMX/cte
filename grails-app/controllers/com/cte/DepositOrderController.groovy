@@ -11,16 +11,11 @@ class DepositOrderController {
 
   static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-  // TODO: Refactor
   def authorizeDepositOrder(DepositOrder order) {
     def user = springSecurityService.currentUser
     depositOrderService.addAuthorizationToDepositOrder(order, user)
-    if (depositOrderService.isFullAuthorized(order)){
-      order.status = DepositOrderStatus.AUTHORIZED
-      order.save flush:true
-      depositOrderService.notifyAuthorizationDepositOrder(order)
-    }
-
+    if (depositOrderService.isFullAuthorized(order))
+      depositOrderService.authorizeAndNotifyDepositOrder(order)
     redirect action:"list", params:[status: params.status]
 
   }

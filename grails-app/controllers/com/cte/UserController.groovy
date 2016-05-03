@@ -35,7 +35,7 @@ class UserController {
   }
 
   def authorizer() {
-    [user:new UserCommand(),authorize:true,company:session.company, authorities:Role.findAllByAuthorityInList(['ROLE_INTEGRADO_OPERADOR', 'ROLE_INTEGRADO_AUTORIZADOR'])]
+    [user:new UserCommand(),authorize:true,company:session.company, authorities:Role.findAllByAuthorityInList(['ROLE_INTEGRADO_OPERADOR', 'ROLE_INTEGRADO_AUTORIZADOR','ROLE_CONTABILIDAD'])]
   }
 
   @Transactional

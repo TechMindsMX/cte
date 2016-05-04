@@ -113,7 +113,7 @@
 
              </sec:ifAnyGranted>
 
-             <sec:ifAnyGranted roles="ROLE_INTEGRADO, ROLE_INTEGRADO_OPERADOR">
+             <sec:ifAnyGranted roles="ROLE_INTEGRADO, ROLE_INTEGRADO_OPERADOR, ROLE_CONTABILIDAD">
                 <g:if test="${depositOrder.status == DepositOrderStatus.CREATED}">
                  <g:link controller="depositOrder" action="confirmDepositOrder" id="${depositOrder.id}" class="btn btn-success"><i class="fa fa-check"></i> Solicitar Autorización de Depósito</g:link>
                 </g:if>

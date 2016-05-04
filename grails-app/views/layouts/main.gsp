@@ -265,7 +265,11 @@
               <g:link action="list" controller="depositOrder" params='[status:"${com.cte.DepositOrderStatus.AUTHORIZED}"]'><i class="fa fa-angle-double-right"></i>Listado de Depositos</g:link>
             </li>
           </sec:ifAnyGranted>
-
+          <sec:ifAnyGranted roles="ROLE_CONTABILIDAD">
+            <li>
+              <g:link action="list" controller="depositOrder" params='[status:"${com.cte.DepositOrderStatus.AUTHORIZED}"]'><i class="fa fa-angle-double-right"></i>Listado de Depositos</g:link>
+            </li>
+          </sec:ifAnyGranted>
 
           <sec:ifAnyGranted roles="ROLE_ADMIN, ROLE_ADMIN_IECCE">
           <li>

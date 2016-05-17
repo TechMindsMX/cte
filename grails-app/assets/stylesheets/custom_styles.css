@@ -2,6 +2,7 @@
 html, body{
 	font: 400 100% 'Open Sans', sans-serif;
 	color: #2c3e50;
+  background: #2A82BB;
 }
 h1,h2,h3,h4,h5{
 	font-family: 'Lato', sans-serif;
@@ -19,7 +20,7 @@ h1,h2,h3,h4,h5{
 }
 .navbar-side{
 	font: 300 100% 'Lato', sans-serif;
-	
+
 }
 .navbar-side ul.side-nav{
 	border: none;
@@ -32,7 +33,7 @@ h1,h2,h3,h4,h5{
 }
 .navbar-nav > li > a{
 	padding-top: 1em;
-	padding-bottom: 0;	
+	padding-bottom: 0;
 }
 .navbar-side .navbar-nav>li>a{
 	color: rgba(255, 255, 255, 1);
@@ -46,7 +47,8 @@ h1,h2,h3,h4,h5{
 	margin-bottom: 0.5em;
 }
 .navbar-side .side-nav li.panel ul li a{
-	background: #34495e;
+  background: #2A82BB;
+	/*background: #34495e;*/
 	color: rgba(255, 255, 255, 1);
 	padding-left: 3em;
 	font-size: 90%;
@@ -58,16 +60,18 @@ h1,h2,h3,h4,h5{
 .navbar-side .side-nav li.panel ul li a:focus
 {
 	color: rgba(255, 255, 255, 0.8);
-	background: #34495e;
+  background: #2A82BB;
+	/*background: #34495e;*/
 }
 .navbar-side .side-nav > li > a.active{
-	background: #34495e;
+  background: #2A82BB;
+	/*background: #34495e;*/
 	color: #00ffff;
 }
 
 /*Titulos*/
 .page-title{
-	display: block; 
+	display: block;
 }
 .page-title h1{
 	font-size: 1.2em;
@@ -100,22 +104,22 @@ h1,h2,h3,h4,h5{
 	color: #34495e;
 }
 .circle-tile-content.dark-blue{
-	background: none; 
+	background: none;
 	border: solid 1px rgba(52,73,94,0.5);
 	border-left: solid 3px rgba(52,73,94,1);
 }
 .circle-tile-content.green{
-	background: none; 
+	background: none;
 	border: solid 1px rgba(52,73,94,0.5);
 	border-left: solid 3px rgba(21, 152, 126,1);
 }
 .circle-tile-content.blue{
-	background: none; 
+	background: none;
 	border: solid 1px rgba(52,73,94,0.5);
 	border-left: solid 3px rgb(41, 128, 185);
 }
 .circle-tile-content.purple{
-	background: none; 
+	background: none;
 	border: solid 1px rgba(52,73,94,0.5);
 	border-left: solid 3px rgb(142, 68, 173);
 }
@@ -166,27 +170,27 @@ h1,h2,h3,h4,h5{
 }
 .portlet.portlet-blue{
 	border-color: #2c3e50;
-	border-left: solid 3px #2980b9;	
+	border-left: solid 3px #2980b9;
 }
 .portlet.portlet-orange{
 	border-color: #2c3e50;
-	border-left: solid 3px #f39c12;	
+	border-left: solid 3px #f39c12;
 }
 .portlet.portlet-green{
 	border-color: #2c3e50;
-	border-left: solid 3px #16a085;	
+	border-left: solid 3px #16a085;
 }
 .portlet.portlet-purple{
 	border-color: #2c3e50;
-	border-left: solid 3px #8e44ad;	
+	border-left: solid 3px #8e44ad;
 }
 .portlet.portlet-red{
 	border-color: #2c3e50;
-	border-left: solid 3px #e74c3c;	
+	border-left: solid 3px #e74c3c;
 }
 .portlet.portlet-basic{
 	border-color: #2c3e50;
-	border-left: solid 3px #2c3e50;	
+	border-left: solid 3px #2c3e50;
 }
 .portlet.portlet-default > .portlet-heading{
 	background: none;
@@ -360,7 +364,7 @@ h1,h2,h3,h4,h5{
 	}
 }
 
-	
+
 @media (max-width:768px) and (min-width:0) {
 	.page-title{
 		font-size: 80%;

@@ -31,7 +31,7 @@ class RequestIntegratedService {
     def emailNotificationAdminCommand = new EmailNotificationToIntegratedCommand()
     emailNotificationAdminCommand.emailResponse = grailsApplication.config.emailer.emailAdmin
     emailNotificationAdminCommand.nameCompany = company.toString()
-    emailNotificationAdminCommand.message = "La Empresa ${company.toString()}, desea ingregar como empresa integrada"
+    emailNotificationAdminCommand.message = "La Empresa ${company.toString()}, desea ingresar como empresa integrada"
     emailNotificationAdminCommand.url = url
     emailNotificationAdminCommand
   }

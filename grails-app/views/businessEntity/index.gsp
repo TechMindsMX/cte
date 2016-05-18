@@ -7,11 +7,7 @@
   </head>
   <body>
     <div class="page-title">
-      <h1><g:message code="businessEntity.view.list.label" /></h1>
-      <ol class="breadcrumb">
-        <li><i class="fa fa-caret-square-o-up"></i> Compañia</li>
-        <li class="active"><g:message code="businessEntity.view.list.label" /></li>
-      </ol>
+      <g:pageTitle icon="businessEntity.icon.title.list" title="businessEntity.label.title" title2="businessEntity.label.title.list" subtitle="businessEntity.view.list.label"/>
     </div>
     <div id="edit-address" class="content scaffold-edit" role="main">
       <div class="portlet portlet-blue">

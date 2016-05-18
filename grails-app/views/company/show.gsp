@@ -60,7 +60,7 @@
                   </g:if>
                   <g:if test="${company.status == CompanyStatus.CREATED && !available}">
                     <div align="center">
-                      <font color="red" size="3">Aun no cuentas con todos los detalles para enviar tu solicitud</font>
+                      <font color="red" size="3">Aún no cuentas con todos los detalles para enviar tu solicitud</font>
                     </div>
                   </g:if>
                   <g:if test="${company.status == CompanyStatus.REJECTED}">

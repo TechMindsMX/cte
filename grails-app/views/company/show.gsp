@@ -10,11 +10,7 @@
   </head>
   <body>
     <div class="page-title">
-      <h1><g:message code="company.show"/></h1>
-      <ol class="breadcrumb">
-        <li><i class="fa fa-caret-square-o-up"></i> Compañia</li>
-        <li class="active">Informacion de la Empresas</li>
-      </ol>
+      <g:pageTitle icon="company.icon.title.show" title="user.label.title" title2="company.show" subtitle="company.show"/>
     </div>
     <div class="row">
       <div class="col-lg-12">

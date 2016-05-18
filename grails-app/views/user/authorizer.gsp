@@ -8,11 +8,7 @@
   </head>
   <body>
     <div class="page-title">
-      <h1>Agregar Usuario</h1>
-      <ol class="breadcrumb">
-        <li><i class="fa fa-caret-square-o-up"></i> Compañia</li>
-        <li class="active">Nuevo Usuario</li>
-      </ol>
+      <g:pageTitle icon="user.icon.title.create" title="user.label.title" title2="user.label.title.create" subtitle="user.view.create.label"/>
     </div>
       <div class="row">
           <div class="portlet portlet-blue">

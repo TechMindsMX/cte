@@ -8,11 +8,7 @@
   </head>
   <body>
     <div class="page-title">
-      <h1>Configurar Usuarios</h1>
-      <ol class="breadcrumb">
-        <li><i class="fa fa-caret-square-o-up"></i> Compañia</li>
-        <li class="active">Configurar Usuarios</li>
-      </ol>
+      <g:pageTitle icon="user.icon.title.list" title="user.label.title" title2="user.label.title.list" subtitle="user.view.list.label"/>
     </div>
       <div class="row">
           <div class="portlet portlet-default">

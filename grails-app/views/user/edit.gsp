@@ -7,18 +7,13 @@
   </head>
   <body>
     <div class="page-title">
-      <h1><g:message code="user.edit"/></h1>
-      <ol class="breadcrumb">
-        <li><i class="fa fa-caret-square-o-up"></i> Compañia</li>
-        <li class="active">Informacion del Representante legal</li>
-      </ol>
+      <g:pageTitle icon="user.icon.title.show" title="user.label.title" title2="user.label.title.edit" subtitle="user.view.show.label"/>
     </div>
     <p>
     <g:link controller="company" action="show" id="${company}" class="btn btn-default">
       <g:message code="company.show"/>
     </g:link>
     </p>
-    <div class="container">
       <div class="row">
           <div class="portlet portlet-blue">
             <div class="portlet-heading login-heading">
@@ -51,27 +46,27 @@
                     <f:field property="profile.curp" label="${message(code:'user.curp')}" required="true" wrapper="home"/>
                     <f:field property="profile.birthDate" label="${message(code:'user.birthdate')}" value="${new Date()}"/>
                     <div class="form-group">
-                      <label class="control-label"><g:message code="user.gender" /><span class="required-indicator">*</span></label>           
+                      <label class="control-label"><g:message code="user.gender" /><span class="required-indicator">*</span></label>
                       <g:select name="banco" from="${com.cte.Gender.values()}" class="form-control" aria-controls="example-table"/>
                     </div>
                     <div class="form-group">
-                      <label class="control-label"><g:message code="user.nationality" /><span class="required-indicator">*</span></label>           
+                      <label class="control-label"><g:message code="user.nationality" /><span class="required-indicator">*</span></label>
                       <g:select name="banco" from="${com.cte.Nationality.values()}" class="form-control" aria-controls="example-table"/>
                     </div>
 
                       <div class="form-group">
-                        <label>Numero Telefonico</label>
+                        <label><g:message code="user.number"/></label>
                         <input type="tel" name="number" class="form-control" pattern=".{10,}" required="true"/>
                       </div>
-                       <div class="form-group">
-                        <label>Extención</label>
+                      <div class="form-group">
+                        <label><g:message code="user.extension"/></label>
                         <input type="text" name="extension" class="form-control" />
                       </div>
                        <div class="form-group">
                         <label>${message(code:'user.telephoneType')}</label>
                         <g:select name="type" class="form-control" from="${com.cte.TelephoneType.values()}" />
                       </div>
-                      
+
                   </f:with>
                 </fieldset>
                 <fieldset class="buttons">
@@ -81,6 +76,5 @@
             </div>
           </div>
       </div>
-    </div>
   </body>
 </html>

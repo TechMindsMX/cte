@@ -7,11 +7,7 @@
     </head>
     <body>
       <div class="page-title">
-        <h1><g:message code="company.new" /></h1>
-        <ol class="breadcrumb">
-          <li><i class="fa fa-caret-square-o-up"></i> Compañia</li>
-          <li class="active">Creación de Compañia</li>
-        </ol>
+        <g:pageTitle icon="company.icon.title.create" title="company.label" title2="company.create" subtitle="company.new"/>
       </div>
         <div class="portlet portlet-blue">
             <div class="portlet-heading">

@@ -7,11 +7,7 @@
     </head>
     <body>
       <div class="page-title">
-        <h1><g:message code="payroll.new" /></h1>
-        <ol class="breadcrumb">
-          <li><i class="fa fa-caret-square-o-up"></i> Pagos</li>
-          <li class="active">Listado de Propagacion de nomina y pagos</li>
-        </ol>
+        <g:pageTitle icon="payroll.icon.title.list" title="payroll.label.title" title2="payroll.label.title.list" subtitle="payroll.view.list.label"/>
       </div>
       <div class="portlet portlet-blue">
           <div class="portlet-heading">

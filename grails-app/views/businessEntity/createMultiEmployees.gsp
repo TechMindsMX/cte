@@ -8,17 +8,13 @@
     </head>
     <body>
       <div class="page-title">
-       <h1><g:message code="businessEntity.view.create.multi.employees.label" /></h1>
-        <ol class="breadcrumb">
-          <li><i class="fa fa-caret-square-o-up"></i> Compañia</li>
-          <li class="active"><g:message code="businessEntity.view.create.multi.employees.label" /></li>
-        </ol>
+        <g:pageTitle icon="businessEntity.icon.title.list" title="businessEntity.label.title" title2="businessEntity.label.title.create.multiple" subtitle="businessEntity.view.create.multi.employees.label"/>
       </div>
       <div id="edit-address" class="content scaffold-edit" role="main">
         <div class="portlet portlet-blue">
           <div class="portlet-heading">
             <div class="portlet-title">
-              <h4>Creación de Multiples Empleados</h4>
+              <h4>Creación de Múltiples Empleados</h4>
             </div>
             <div class="clearfix"></div>
           </div>

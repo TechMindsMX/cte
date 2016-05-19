@@ -8,11 +8,7 @@
   </head>
   <body>
     <div class="page-title">
-      <h1><g:message code="company.list.label" args="[entityName]" /></h1>
-      <ol class="breadcrumb">
-        <li><i class="fa fa-caret-square-o-up"></i> Compañia</li>
-        <li class="active">Listado de tus Empresas</li>
-      </ol>
+      <g:pageTitle icon="company.icon.title.list" title="admin.label.title" title2="company.list.label" subtitle="company.view.label.list"/>
     </div>
     <div align="center">
       <p class="text-primary">Selecciona una de las empresar para poder operar</p>

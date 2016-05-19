@@ -7,15 +7,7 @@
   <body>
 
     <div class="page-title">
-      <h1>
-        Tablero principal
-        <small>Administración total</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><i class="fa fa-dashboard"></i>  <a href="index.html">Tablero principal</a>
-        </li>
-        <li class="active">Bienvenido, puedes empezar por aquí... </li>
-      </ol>
+      <g:pageTitle icon="dashboard.icon.title" title="dashboard.label.title" title2="dashboard.label.title2" subtitle="dashboard.label.subtitle"/>
     </div>
 
     <sec:ifAnyGranted roles="ROLE_LEGAL_REPRESENTATIVE,ROLE_INTEGRADO_AUTORIZADOR,ROLE_INTEGRADO_OPERADOR">

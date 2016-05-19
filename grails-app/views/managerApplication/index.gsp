@@ -6,11 +6,7 @@
   </head>
   <body>
     <div class="page-title">
-      <h1><g:message code="admin.list" /></h1>
-      <ol class="breadcrumb">
-        <li><i class="fa fa-caret-square-o-up"></i> Administracion</li>
-        <li class="active">Seccion de solicitudes de integrados</li>
-      </ol>
+      <g:pageTitle icon="admin.icon.title.list" title="admin.label.title" title2="admin.label.title.list" subtitle="admin.list"/>
     </div>
     <ul class="nav nav-tabs nav-pills" role="tablist">
       <li role="presentation"  class="active"><a href="#validate" aria-controls="validate" role="tab" data-toggle="tab">Para Validar</a></li>
